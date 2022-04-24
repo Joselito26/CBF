@@ -1,0 +1,508 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Cabin&family=Mulish&family=The+Nautigal&display=swap");
+*,
+html,
+body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Cabin", Helvetica, Arial, Lucida, sans-serif;
+  line-height: 1.3;
+  padding: 0;
+  margin: 0;
+}
+
+*,
+em,
+strong {
+  font-style: normal;
+  font-weight: normal;
+}
+
+@-webkit-keyframes h1Anim {
+  100% {
+    -webkit-transform: translate(-50%) scaleX(1);
+            transform: translate(-50%) scaleX(1);
+  }
+}
+
+@keyframes h1Anim {
+  100% {
+    -webkit-transform: translate(-50%) scaleX(1);
+            transform: translate(-50%) scaleX(1);
+  }
+}
+
+@-webkit-keyframes scaleMore {
+  0% {
+    -webkit-transform: scale(0.2);
+            transform: scale(0.2);
+    opacity: 0;
+  }
+  10% {
+    -webkit-transform: scale(0.6);
+            transform: scale(0.6);
+  }
+  70% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+    opacity: 0.2;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes scaleMore {
+  0% {
+    -webkit-transform: scale(0.2);
+            transform: scale(0.2);
+    opacity: 0;
+  }
+  10% {
+    -webkit-transform: scale(0.6);
+            transform: scale(0.6);
+  }
+  70% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+    opacity: 0.2;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@-webkit-keyframes scaleImportant {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    color: #585858;
+  }
+  40% {
+    -webkit-transform: scale(1.3);
+            transform: scale(1.3);
+    color: #e21358;
+  }
+  60% {
+    -webkit-transform: scale(1.3);
+            transform: scale(1.3);
+    color: #e21358;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    color: #585858;
+  }
+}
+
+@keyframes scaleImportant {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    color: #585858;
+  }
+  40% {
+    -webkit-transform: scale(1.3);
+            transform: scale(1.3);
+    color: #e21358;
+  }
+  60% {
+    -webkit-transform: scale(1.3);
+            transform: scale(1.3);
+    color: #e21358;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    color: #585858;
+  }
+}
+
+.container .navBar ul, footer .bottomContacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+header {
+  position: fixed;
+  z-index: 10;
+  background-color: #ffffff;
+  top: 0;
+  width: 100%;
+  height: 20vh;
+}
+
+.container {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 20vh;
+  padding: 1vh 1vw;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container #logoHead {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+}
+
+.container #logoHead .logo {
+  height: 13vh;
+}
+
+.container .textUnderLogo {
+  color: #715111;
+  font-family: "The Nautigal", cursive;
+  font-size: 1.3em;
+  font-weight: 500;
+}
+
+.container .navBar ul li:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  color: #c58e1e;
+  -webkit-box-shadow: 0px 0px 1px rgba(128, 128, 128, 0.385);
+          box-shadow: 0px 0px 1px rgba(128, 128, 128, 0.385);
+  border-radius: 25px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.container li,
+.container a {
+  margin: 15px;
+  text-decoration: none;
+  list-style-type: none;
+  color: #585858;
+  text-decoration: none;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.container li .nameLinks,
+.container a .nameLinks {
+  font-weight: 500;
+  margin-left: 5px;
+  font-size: 1em;
+}
+
+/* L'after et le before doivent être en position 
+absolute et avoir un content, même si il est vide*/
+header::after {
+  content: "";
+  position: absolute;
+  background: #585858;
+  height: 1.3px;
+  width: 100%;
+  bottom: -1px;
+  left: 50%;
+  -webkit-transform: translate(-50%) scaleX(0);
+          transform: translate(-50%) scaleX(0);
+  -webkit-animation: h1Anim 6s ease-in-out forwards;
+          animation: h1Anim 6s ease-in-out forwards;
+  /* avec transform-origin: left; on peut laire défiler la
+  barre en partant de la gauche*/
+}
+
+#haut-de-page {
+  position: relative;
+  top: -150px;
+}
+
+main {
+  margin-top: 20vh;
+}
+
+h1 {
+  font-size: 1.3rem;
+  color: #715111;
+  font-weight: 500;
+  margin: 3vh 0 1vw 8vh;
+}
+
+.spaceBetweenBlock {
+  height: 1vh;
+}
+
+#wrapper {
+  margin-top: 1s5vh;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[12];
+      grid-template-columns: repeat(12, 1fr);
+  -ms-grid-rows: 190px 190px 100px;
+      grid-template-rows: 190px 190px 100px;
+  grid-gap: 1px 0.5px;
+      grid-template-areas: "color1 img img img title title title title title title . ." "color1 img img img title title title title title title . ." ". img img img adress adress timeOpen timeOpen contact contact bridge bridge";
+}
+
+#wrapper .colorCase {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  grid-area: color1;
+  background-color: #e21358;
+  margin: 0;
+}
+
+#wrapper .imagePresentation {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 3;
+  grid-area: img;
+  overflow: hidden;
+}
+
+#wrapper .title {
+  color: #585858;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 5;
+  -ms-grid-column-span: 6;
+  grid-area: title;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#wrapper .title .titleFull {
+  position: relative;
+  margin-left: 19vh;
+  margin-top: 1px;
+  letter-spacing: 1.3px;
+  color: #e21358;
+  text-shadow: 0.5px 0.5px 0px #e21358;
+  font-weight: 600;
+}
+
+#wrapper .title .titleFull .titleC {
+  font-family: "The Nautigal", cursive;
+  font-size: 3.1em;
+  font-weight: 500;
+}
+
+#wrapper .title .titleFull::before {
+  content: "\2730";
+  position: absolute;
+  top: 10px;
+  right: 1vw;
+  color: #e21358;
+  -webkit-animation: 2s scaleMore linear;
+          animation: 2s scaleMore linear;
+}
+
+#wrapper .title .titleFull .titleB {
+  font-style: oblique;
+  font-family: "The Nautigal", cursive;
+  margin: 0;
+  margin-top: -4vh;
+  font-size: 1.9em;
+  padding-left: 20vw;
+  opacity: 1;
+  -webkit-animation: 3s scaleMore ease-in-out;
+          animation: 3s scaleMore ease-in-out;
+}
+
+#wrapper .description {
+  margin: 8vh 0 0 8vh;
+}
+
+#wrapper .description .moreBig {
+  display: inline-block;
+  padding-right: 2vw;
+  text-align: left;
+  letter-spacing: 1.3px;
+  font-size: 1.3rem;
+  -webkit-animation: 4s scaleImportant ease-out 2;
+          animation: 4s scaleImportant ease-out 2;
+}
+
+#wrapper #bridge {
+  -ms-grid-row: 3;
+  -ms-grid-column: 11;
+  -ms-grid-column-span: 2;
+  grid-area: bridge;
+  font-size: 0.8em;
+  background-color: rgba(141, 137, 129, 0.2);
+}
+
+#wrapper .bridge {
+  margin-top: 1.3vh;
+}
+
+#wrapper #opening {
+  -ms-grid-row: 3;
+  -ms-grid-column: 7;
+  -ms-grid-column-span: 2;
+  grid-area: timeOpen;
+  font-size: 0.8em;
+  background-color: rgba(141, 137, 129, 0.2);
+}
+
+#wrapper #contact {
+  -ms-grid-row: 3;
+  -ms-grid-column: 9;
+  -ms-grid-column-span: 2;
+  grid-area: contact;
+  background-color: rgba(141, 137, 129, 0.2);
+}
+
+#wrapper #contact a {
+  text-decoration: none;
+  color: #585858;
+}
+
+#wrapper #contact a:hover {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+  color: #f396a6;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#wrapper #contact a .fas {
+  margin-right: 10px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+#wrapper #contact a .fas:hover {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+  color: #f396a6;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+#wrapper #adress {
+  -ms-grid-row: 3;
+  -ms-grid-column: 5;
+  -ms-grid-column-span: 2;
+  grid-area: adress;
+  line-height: 2.5;
+  background-color: rgba(141, 137, 129, 0.2);
+}
+
+#wrapper .mainWrapper {
+  color: #585858;
+  padding: 1.5vh 1vw 1vh 1vw;
+  font-size: 0.8em;
+  line-height: 1.6;
+}
+
+#wrapper .info {
+  font-size: 1em;
+  margin: 0 0 0.8vh 2.6vw;
+  color: #715111;
+}
+
+.activitiesList .text {
+  width: 45vw;
+  padding: 1vh 2vw 2vh 2vw;
+  background: rgba(245, 245, 245, 0.739);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(245, 245, 245, 0.26)), color-stop(rgba(245, 245, 245, 0.8)), to(rgba(245, 245, 245, 0.13)));
+  background: linear-gradient(rgba(245, 245, 245, 0.26), rgba(245, 245, 245, 0.8), rgba(245, 245, 245, 0.13));
+  -webkit-box-shadow: 0 2px 15px 5px rgba(0, 0, 0, 0.08);
+          box-shadow: 0 2px 15px 5px rgba(0, 0, 0, 0.08);
+}
+
+.activitiesList .text h2,
+.activitiesList .text h3 {
+  color: #715111;
+  margin-bottom: 5vh;
+  text-align: center;
+}
+
+.activitiesList .nailsJob {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1vh 10vw;
+  border-radius: 50px;
+}
+
+.activitiesList .nailsJob .nailsPhoto {
+  width: 40vw;
+  border-top-right-radius: 31px;
+}
+
+.activitiesList .nailsJob .text {
+  border-top-left-radius: 25px;
+}
+
+.activitiesList .toothJob {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1vh 10vw;
+}
+
+.activitiesList .toothJob .toothPhoto {
+  width: 40vw;
+  border-bottom-left-radius: 25px;
+}
+
+.activitiesList .toothJob .text {
+  border-bottom-right-radius: 31px;
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 1%;
+  padding: 2vh 1vw 1vh 1vw;
+  color: #e21358;
+  border-top: 1px solid #c58e1e;
+}
+
+footer .bottomContacts {
+  padding-right: 2vw;
+  color: #e21358;
+}
+
+footer .bottomContacts .fab {
+  padding: 0 1.3vw;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+}
+
+footer .bottomContacts .fab:hover {
+  border-radius: 20px;
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+/*# sourceMappingURL=style.css.map */
